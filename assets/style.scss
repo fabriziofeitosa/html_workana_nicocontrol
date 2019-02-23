@@ -1,0 +1,198 @@
+/*
+Theme Name: LoveApp
+Author: Fabrizio Feitosa
+Author URI: http://fabriziofeitosa.me
+Description: LoveApp - 2018/2019
+Version: 1.0
+Tags: brazil, portuguese, app, love
+Text Domain: love-app-domain
+Domain Path: /languages
+
+Desenvolvedor: @fabriziofeitosa
+*/
+
+@charset "UTF-8";
+
+/* #######################################
+        VARIÁVEIS
+####################################### */
+
+$preto: #010210;
+$amarelo: #ffcc29;
+
+/* #######################################
+        BÁSICO
+####################################### */
+
+@import url('https://fonts.googleapis.com/css?family=Oswald:200,400,700');
+
+html {
+    min-height: 100%;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    min-height: 100%;
+    text-transform: uppercase;
+}
+
+*:focus {
+    outline: none !important;
+}
+
+.noSelect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    &:hover {
+        color: inherit;
+        text-decoration: none;
+    }
+    &.tudo {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+}
+
+
+/* #######################################
+        FUNÇÕES
+####################################### */
+
+@mixin input-placeholder {
+    &.placeholder {
+        @content;
+    }
+    &:-moz-placeholder {
+        @content;
+    }
+    &::-moz-placeholder {
+        @content;
+    }
+    &:-ms-input-placeholder {
+        @content;
+    }
+    &::-webkit-input-placeholder {
+        @content;
+    }
+}
+
+@mixin w-sm() {
+    @media screen and (min-width: 576px) {
+        @content;
+    }
+}
+
+@mixin w-md() {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin w-lg() {
+    @media screen and (min-width: 992px) {
+        @content;
+    }
+}
+
+@mixin w-xl() {
+    @media screen and (min-width: 1200px) {
+        @content;
+    }
+}
+
+/* #######################################
+        ESTILOS FILLPAGE
+####################################### */
+
+.t-a {
+    color: $amarelo !important;
+}
+.forte,
+strong {
+    font-weight: 700 !important;
+}
+.leve {
+    font-weight: 200 !important;
+}
+
+#fullpage {
+    .section {
+        position: relative;
+        font-size: 24px;
+        line-height: 1.2;
+
+        .seta {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: inherit;
+            animation: upAndDown .5s infinite  alternate;
+        }
+
+        &.preto {
+            background-color: $preto;
+            color: #fff;
+            .destaque {
+                color: $amarelo;
+            }
+            .seta {
+                color: $amarelo;
+            }
+        }
+        &.amarelo {
+            background-color: $amarelo;
+            color: $preto;
+            .seta {
+                color: $preto;
+            }
+        }
+        &.branco {
+            background-color: #fff;
+            color: $preto;
+            .seta {
+                color: $preto;
+            }
+        }
+    }
+}
+
+@keyframes upAndDown {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+
+/* #######################################
+        SECTIONS / AREA
+####################################### */
+
+.area-01 {
+    background-position: center;
+    background-size: cover;
+
+    .menor {
+        font-size: 30px;
+        max-width: 260px;
+    }
+    h1 {
+        font-size: 90px;
+        line-height: 1.022;
+    }
+    .sub {
+        font-size: 36px;
+        max-width: 380px;
+    }
+}
