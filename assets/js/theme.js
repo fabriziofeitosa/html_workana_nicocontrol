@@ -3,16 +3,18 @@ jQuery(document).ready(function($) {
   "use strict";
 
   //*======================================================*/
-
-  $('#fullpage').fullpage();
-
+  
+  new fullpage('#fullpage', {
+    verticalCentered: true
+  });
+  
   function larguraAltura() {
     var w = window.innerWidth;
     var h = window.innerHeight;
-
+    
     if( w < 425 ) return;
     if( w > 768 ) return;
-
+    
     if( w > h ) {
       $('#avisoModoRetrato').modal('show');
     }
@@ -22,5 +24,4 @@ jQuery(document).ready(function($) {
   $(window).resize(function () {
     larguraAltura()
   });
-
 });

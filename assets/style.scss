@@ -167,6 +167,19 @@ strong {
                 color: $preto;
             }
         }
+
+        .header {
+            text-align: center;
+            .titulo {
+                line-height: 0.92;
+                font-weight: bold;
+                
+                font-size: 100px;
+            }
+            .sub-titulo {
+                font-size: 36px;
+            }
+        }
     }
 }
 
@@ -194,5 +207,27 @@ strong {
     .sub {
         font-size: 36px;
         max-width: 380px;
+    }
+}
+
+.area-02 {
+    .area-video {
+        max-width: 652px;
+        margin: 40px auto;
+    }
+    .text-final {
+        font-size: 20px;
+    }
+    .btn-comprar {
+        background-color: $preto;
+        color: #fff;
+        font-size: 60px;
+        line-height: 1;
+        padding: 25px 45px;
+        width: 100%;
+        display: inline-block;
+        text-align: center;
+        border-radius: 100px;
+        font-weight: bold;
     }
 }
