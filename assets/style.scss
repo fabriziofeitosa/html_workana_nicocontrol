@@ -186,6 +186,7 @@ strong {
             }
             .destaque {
                 background-color: $amarelo;
+                padding: 0 5px;
             }
         }
     }
@@ -247,6 +248,15 @@ strong {
     p {
         margin: 0;
     }
+    .titulo {
+        &.destaque {
+            margin-top: 5px;
+            background-color: $preto;
+            color: $amarelo;
+            display: inline-block;
+            padding: 0px 20px 5px;
+        }
+    }
 }
 
 @keyframes piscarButao {
@@ -273,6 +283,14 @@ strong {
         margin-top: 40px;
         margin-bottom: 0;
     }
+
+    .titulo {
+        &.destaque {
+            display: inline-block;
+            padding: 0px 20px 5px;
+            margin-top: 5px;
+        }
+    }
 }
 
 .area-04 {
@@ -283,7 +301,7 @@ strong {
     }
 }
 
-.area-05 {
+.area-06 {
     text-align: center;
     .header {
         margin-bottom: 40px;
@@ -311,7 +329,56 @@ strong {
     }
 }
 
-.area-06 {
+.area-05 {
+    .area-perguntas {
+        padding: 40px 0 0 0; 
+    }
+
+    #accordionFAQ {
+        .card {
+            border: 1px solid $preto;
+            .card-header {
+                background-color: $amarelo;
+                border-color: $preto;
+                padding: 0;
+                button {
+                    color: $preto !important;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    padding: 18px 32px;
+                    width: 100%;
+                    text-align: left;
+                    text-decoration: none !important;
+                    &:hover {
+                        text-decoration: none !important;
+                    }
+                }
+            }
+            .card-body {
+                font-size: 18px;
+            }
+        }
+    }
+    .btn-adquirir {
+        display: block;
+        margin: 20px auto 0;
+        background-color: $preto;
+        color: #fff;
+        font-size: 35px;
+        line-height: 1;
+        padding: 15px 35px;
+        width: 100%;
+        max-width: 500px;;
+        text-align: center;
+        border-radius: 100px;
+        font-weight: bold;
+        transition: all 1s;
+        animation: piscarButao 1s infinite  alternate;
+        border: 2px solid $preto;
+    }
+}
+
+.area-07 {
     .header {
         margin-bottom: 20px;
     }

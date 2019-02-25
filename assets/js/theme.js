@@ -5,7 +5,8 @@ jQuery(document).ready(function($) {
   //*======================================================*/
   
   new fullpage('#fullpage', {
-    verticalCentered: true
+    verticalCentered: true,
+    scrollBar: true
   });
   
   function larguraAltura() {
