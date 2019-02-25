@@ -24,7 +24,7 @@ $amarelo: #ffcc29;
         BÁSICO
 ####################################### */
 
-@import url('https://fonts.googleapis.com/css?family=Oswald:200,400,700');
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,700');
 
 html {
     min-height: 100%;
@@ -131,7 +131,7 @@ strong {
 #fullpage {
     .section {
         position: relative;
-        font-size: 24px;
+        font-size: 20px;
         line-height: 1.2;
 
         .header {
@@ -140,10 +140,10 @@ strong {
                 line-height: 0.92;
                 font-weight: bold;
                 
-                font-size: 100px;
+                font-size: 72px;
             }
             .sub-titulo {
-                font-size: 36px;
+                font-size: 26px;
             }
         }
 
@@ -206,11 +206,11 @@ strong {
         max-width: 260px;
     }
     h1 {
-        font-size: 90px;
+        font-size: 80px;
         line-height: 1.022;
     }
     .sub {
-        font-size: 36px;
+        font-size: 26px;
         max-width: 380px;
     }
 }
@@ -226,9 +226,9 @@ strong {
     .btn-comprar {
         background-color: $preto;
         color: #fff;
-        font-size: 60px;
+        font-size: 45px;
         line-height: 1;
-        padding: 25px 45px;
+        padding: 15px 35px;
         width: 100%;
         display: inline-block;
         text-align: center;
