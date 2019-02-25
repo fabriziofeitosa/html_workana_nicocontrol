@@ -134,6 +134,19 @@ strong {
         font-size: 24px;
         line-height: 1.2;
 
+        .header {
+            text-align: center;
+            .titulo {
+                line-height: 0.92;
+                font-weight: bold;
+                
+                font-size: 100px;
+            }
+            .sub-titulo {
+                font-size: 36px;
+            }
+        }
+
         .seta {
             position: absolute;
             bottom: 10px;
@@ -152,6 +165,11 @@ strong {
             .seta {
                 color: $amarelo;
             }
+            .header {
+                .titulo {
+                    color: $amarelo;
+                }
+            }
         }
         &.amarelo {
             background-color: $amarelo;
@@ -165,19 +183,6 @@ strong {
             color: $preto;
             .seta {
                 color: $preto;
-            }
-        }
-
-        .header {
-            text-align: center;
-            .titulo {
-                line-height: 0.92;
-                font-weight: bold;
-                
-                font-size: 100px;
-            }
-            .sub-titulo {
-                font-size: 36px;
             }
         }
     }
@@ -229,5 +234,90 @@ strong {
         text-align: center;
         border-radius: 100px;
         font-weight: bold;
+        transition: all 1s;
+        animation: piscarButao 1s infinite  alternate;
+        border: 2px solid $preto;
+    }
+    p {
+        margin: 0;
+    }
+}
+
+@keyframes piscarButao {
+    0% {
+        background-color: #fff;
+        color: $preto;
+    }
+    100% {
+        background-color: $preto;
+        color: #fff;
+    }
+}
+
+.area-03 {
+    background-position: left 50vw top 100%;
+    text-align: center;
+
+    .frase-01 {
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+
+    .frase-02 {
+        margin-top: 40px;
+        margin-bottom: 0;
+    }
+}
+
+.area-04 {
+    text-align: center;
+    .area-video {
+        margin: 40px auto;
+        max-width: 521px;
+    }
+}
+
+.area-05 {
+    text-align: center;
+    .header {
+        margin-bottom: 40px;
+    }
+    .plano {
+        background-color: #fff;
+        box-shadow: 0px 3px 7px 0px rgba(6, 6, 6, 0.35);
+        padding: 10px;
+        display: inline-block;
+    }
+    .frase-destaque {
+        display: inline-block;
+        background-color: $preto;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 100px;
+        margin: 30px 0 15px;
+        border: 2px solid transparent;
+        transition: all .2s;
+        &:hover {
+            background-color: #fff;
+            color: $preto;
+            border-color: $preto;
+        }
+    }
+}
+
+.area-06 {
+    .header {
+        margin-bottom: 20px;
+    }
+    .conteudo {
+        position: relative;
+    }
+    .selo {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .pessoas {
+        max-width: 100%;
     }
 }
