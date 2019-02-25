@@ -133,6 +133,8 @@ strong {
         position: relative;
         font-size: 20px;
         line-height: 1.2;
+        background-size: cover;
+        background-attachment: fixed;
 
         .header {
             text-align: center;
