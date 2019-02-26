@@ -131,21 +131,29 @@ strong {
 #fullpage {
     .section {
         position: relative;
-        font-size: 20px;
         line-height: 1.2;
         background-size: cover;
         background-attachment: fixed;
+        font-size: 16px;
+        @include w-md() {
+            font-size: 20px;
+        }
 
         .header {
             text-align: center;
             .titulo {
                 line-height: 0.92;
                 font-weight: bold;
-                
-                font-size: 62px;
+                font-size: 36px;
+                @include w-md() {
+                    font-size: 62px;
+                }
             }
             .sub-titulo {
-                font-size: 26px;
+                font-size: 16px;
+                @include w-md() {
+                    font-size: 26px;
+                }
             }
         }
 
@@ -206,18 +214,35 @@ strong {
 .area-01 {
     background-position: center;
     background-size: cover;
+    text-align: center;
+    @include w-md() {
+        text-align: left;
+    }
 
     .menor {
-        font-size: 30px;
-        max-width: 260px;
+        max-width: 100%;
+        font-size: 20px;
+        @include w-md() {
+            max-width: 260px;
+            font-size: 30px;
+        }
     }
     h1 {
-        font-size: 80px;
         line-height: 1.022;
+        font-size: 50px;
+        @include w-md() {
+            font-size: 80px;
+        }
     }
     .sub {
+        max-width: 100%;
         font-size: 26px;
-        max-width: 380px;
+        margin-bottom: 30px;
+        @include w-md() {
+            max-width: 380px;
+            font-size: 26px;
+            margin-bottom: 0px;
+        }
     }
 }
 
@@ -227,17 +252,18 @@ strong {
         margin: 40px auto;
     }
     .text-final {
-        font-size: 20px;
         text-align: center;
+        font-size: 16px;
+        @include w-md() {
+            font-size: 20px;
+        }
     }
     .btn-comprar {
         display: block;
         margin: 20px auto 0;
         background-color: $preto;
         color: #fff;
-        font-size: 45px;
         line-height: 1;
-        padding: 15px 35px;
         width: 100%;
         max-width: 500px;;
         text-align: center;
@@ -246,6 +272,13 @@ strong {
         transition: all 1s;
         animation: piscarButao 1s infinite  alternate;
         border: 2px solid $preto;
+        
+        font-size: 35px;
+        padding: 10px 20px;
+        @include w-md() {
+            font-size: 45px;
+            padding: 15px 35px;
+        }
     }
     p {
         margin: 0;
@@ -305,6 +338,10 @@ strong {
 
 .area-06 {
     text-align: center;
+    padding: 50px 0 60px;
+    @include w-md() {
+        padding: 0;
+    }
     .header {
         margin-bottom: 40px;
     }
@@ -313,6 +350,10 @@ strong {
         box-shadow: 0px 3px 7px 0px rgba(6, 6, 6, 0.35);
         padding: 10px;
         display: inline-block;
+        margin-bottom: 20px;
+        @include w-md() {
+            margin-bottom: 0px;
+        }
     }
     .frase-destaque {
         display: inline-block;
@@ -357,7 +398,10 @@ strong {
                 }
             }
             .card-body {
-                font-size: 18px;
+                font-size: 14px;
+                @include w-md() {
+                    font-size: 18px;
+                }
             }
         }
     }
@@ -366,9 +410,7 @@ strong {
         margin: 20px auto 0;
         background-color: $preto;
         color: #fff;
-        font-size: 35px;
         line-height: 1;
-        padding: 15px 35px;
         width: 100%;
         max-width: 500px;;
         text-align: center;
@@ -377,20 +419,58 @@ strong {
         transition: all 1s;
         animation: piscarButao 1s infinite  alternate;
         border: 2px solid $preto;
+        
+        font-size: 24px;
+        padding: 10px 25px;
+        @include w-md() {
+            font-size: 35px;
+            padding: 15px 35px;
+        }
     }
 }
 
 .area-07 {
     .header {
         margin-bottom: 20px;
+        text-align: right !important;
+        padding-right: 20px;
+        @include w-md() {
+            text-align: center !important;
+            padding-right: 0px;
+        }
     }
     .conteudo {
         position: relative;
+        .area-de-texto {
+            text-align: center;
+            @include w-md() {
+                text-align: left;
+            }
+        }
     }
     .selo {
         position: absolute;
-        top: 0;
-        left: 0;
+        top: -50px;
+        left: 10px;
+        @include w-md() {
+            top: -160px;
+            left: 0px;
+        }
+        @include w-lg() {
+            top: -40px;
+            left: 0;
+        }
+        @include w-xl() {
+            top: 0;
+            left: 0;
+        }
+
+        img {
+            width: 80px;
+            @include w-md() {
+                width: auto;
+            }
+        }
     }
     .pessoas {
         max-width: 100%;
@@ -449,5 +529,9 @@ strong {
     .avisos {
         border-top: 2px solid #fff;
         padding-top: 20px;
+        font-size: 14px;
+        @include w-md() {
+            font-size: inherit;
+        }
     }
 }
