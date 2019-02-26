@@ -15,12 +15,15 @@ jQuery(document).ready(function($) {
       //after leaving section 2
       if(origin.index == 5 && direction =='down'){
         fullpage_api.setFitToSection(false);
-        fullpage_api.setResponsive(true);
+        fullpage_api.setAutoScrolling(false);
+        // fullpage_api.setResponsive(true);
       }
   
       else if(origin.index == 6 && direction == 'up'){
+        fullpage_api.moveTo(6);
         fullpage_api.setFitToSection(true);
-        fullpage_api.setResponsive(false);
+        fullpage_api.setAutoScrolling(true);
+        // fullpage_api.setResponsive(false);
       }
     },
     responsiveWidth: 768,
