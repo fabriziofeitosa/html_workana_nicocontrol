@@ -2,6 +2,23 @@ jQuery(document).ready(function($) {
 
   "use strict";
 
+  function larguraAltura() {
+    var w = window.innerWidth;
+    var h = window.innerHeight;
+    
+    if( w < 425 ) return;
+    if( w > 900 ) return;
+    
+    if( w > h ) {
+      $('#avisoModoRetrato').modal('show');
+    }
+  }
+  larguraAltura();
+  
+  $(window).resize(function () {
+    larguraAltura()
+  });
+
   //*======================================================*/
   
   new fullpage('#fullpage', {
@@ -29,21 +46,5 @@ jQuery(document).ready(function($) {
       fullpage_api.destroy();
     }
   });
-  
-  function larguraAltura() {
-    var w = window.innerWidth;
-    var h = window.innerHeight;
-    
-    if( w < 425 ) return;
-    if( w > 768 ) return;
-    
-    if( w > h ) {
-      $('#avisoModoRetrato').modal('show');
-    }
-  }
-  larguraAltura();
-  
-  $(window).resize(function () {
-    larguraAltura()
-  });
+
 });
