@@ -131,11 +131,12 @@ strong {
 #fullpage {
     .section {
         position: relative;
-        line-height: 1.2;
         background-size: cover;
         background-attachment: fixed;
+        line-height: 1.5;
         font-size: 16px;
         @include w-md() {
+            line-height: 1.2;
             font-size: 20px;
         }
 
@@ -146,10 +147,11 @@ strong {
         .header {
             text-align: center;
             .titulo {
-                line-height: 0.92;
                 font-weight: bold;
+                line-height: 1.1;
                 font-size: 36px;
                 @include w-md() {
+                    line-height: 1;
                     font-size: 62px;
                 }
             }
@@ -226,7 +228,9 @@ strong {
     .menor {
         max-width: 100%;
         font-size: 20px;
+        margin-bottom: 7px;
         @include w-md() {
+            margin-bottom: 0px;
             max-width: 260px;
             font-size: 30px;
         }
@@ -328,6 +332,13 @@ strong {
             display: inline-block;
             padding: 0px 20px 5px;
             margin-top: 5px;
+        }
+    }
+
+    .area-video {
+        margin-bottom: 20px;
+        @include w-md() {
+            margin-bottom: 0px;
         }
     }
 }
